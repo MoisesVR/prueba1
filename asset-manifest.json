@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/moisesvr.github.io/prueba1/static/css/main.47668fb3.css",
-    "main.js": "/moisesvr.github.io/prueba1/static/js/main.d16290fb.js",
-    "index.html": "/moisesvr.github.io/prueba1/index.html",
-    "main.47668fb3.css.map": "/moisesvr.github.io/prueba1/static/css/main.47668fb3.css.map",
-    "main.d16290fb.js.map": "/moisesvr.github.io/prueba1/static/js/main.d16290fb.js.map"
+    "main.css": "/prueba1/static/css/main.47668fb3.css",
+    "main.js": "/prueba1/static/js/main.d16290fb.js",
+    "index.html": "/prueba1/index.html",
+    "main.47668fb3.css.map": "/prueba1/static/css/main.47668fb3.css.map",
+    "main.d16290fb.js.map": "/prueba1/static/js/main.d16290fb.js.map"
   },
   "entrypoints": [
     "static/css/main.47668fb3.css",
