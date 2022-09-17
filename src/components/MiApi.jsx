@@ -103,7 +103,7 @@ const MiApi = () => {
                                     <Card.Body>
                                         <Card.Title className="Card-title"> {character.displayName} </Card.Title>
                                         <Card.Text> {character.description} 
-                                        {listSearch.length > 0 ? <Button href="moisesvr.github.io/prueba1" variant="outline-success" className="me-auto my-auto"> Volver </Button> : null}
+                                        {listSearch.length > 0 ? <Button href="prueba1" variant="outline-success" className="me-auto my-auto"> Volver </Button> : null}
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
