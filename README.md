@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+# URL VIDEO https://www.youtube.com/watch?v=vBkfcd76exc
+# URL Github Pages  https://moisesvr.github.io/prueba1/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

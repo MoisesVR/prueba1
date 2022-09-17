@@ -17,7 +17,7 @@ const MiApi = () => {
     const searchCharacterName = (event) => {
         event.preventDefault()
         if (searchCharacter === "") {
-            console.log("Ingresa el nombre de cualquier campeon")
+            alert("Ingresa el nombre de cualquier campeon")
         }
         else {
             const filterSearchCharacter = characters.filter((character) => character.displayName.includes(searchCharacter))
@@ -28,18 +28,14 @@ const MiApi = () => {
 
     const sortByName = () => {
         const listSort = characters.sort((a, b) => a.displayName > b.displayName ? 1 : -1)
-        console.log(characters)
         setOrderList(listSort)
-        console.log(listSort)
     }
     useEffect(() => {
         async function getData() {
             try {
                 /* devuelve el objeto de la api */
                 const { data, status } = await axios.get(url)
-                /*  const elementsSort = sortByName(data.data) */
                 setCharacters(data.data)
-                console.log(data.data)
             } catch (error) {
                 return (
                     <div>
@@ -86,6 +82,7 @@ const MiApi = () => {
                 </Container>
             </Navbar>
             <div>
+                {/*  Recorremos la lista que nos retorna el Input una vez que el boton es clickeado */}
                 {/* Pintar el buscar */}
                 {listSearch.map((character) => {
                     return (
@@ -102,19 +99,21 @@ const MiApi = () => {
                                     <Card.Img variant="top" src={character.fullPortrait} />
                                     <Card.Body>
                                         <Card.Title className="Card-title"> {character.displayName} </Card.Title>
-                                        <Card.Text> {character.description} 
-                                        {listSearch.length > 0 ? <Button href="https://moisesvr.github.io/prueba1" variant="outline-success" className="me-auto my-auto"> Volver </Button> : null}
+                                        <Card.Text> {character.description}
+                                            {listSearch.length > 0 ? <Button href="https://moisesvr.github.io/prueba1" variant="outline-success" className="me-auto my-auto"> Volver </Button> : null}
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
                             </div>
                         </div>
                     )
-
                 })}
             </div>
             {/* Pintar el ordenado alfabeticamente*/}
+            {/* Cuando listSearch sea menor que 0 no hará nada y cuando cambie a mayor que 0 pasara a la siguiente condicion */}
             {listSearch.length > 0 ? null : <div className="container" style={{ maxWidth: "100%" }}>
+                {/* Cuando el largo del arreglo orderList sea menor que 0 va a dibujar  */}
+                {/* Va dibujando desde la lista ordenada directamente */}
                 {orderList.length > 0 ? orderList.map((character) => {
                     return (
                         <div key={character.uuid}>
@@ -137,7 +136,8 @@ const MiApi = () => {
                         </div>)
 
                 }) :
-                /* Pintar el principal de la api */
+                /* Si no cuando orderlist sea mayor que 0 pasara a dibujar los datos directos de la api  */
+                    /* Pintar el principal de la api */
                     characters.map((character) => {
                         return (
                             <div key={character.uuid}>
@@ -153,7 +153,7 @@ const MiApi = () => {
                                     <Card.Body>
                                         <Card.Title className="Card-title"> {character.displayName} </Card.Title>
                                         <Card.Text> {character.description}
-                                         </Card.Text>
+                                        </Card.Text>
                                     </Card.Body>
                                 </Card>
                             </div>
