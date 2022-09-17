@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container{
+  display: flex;
+  flex: 1 1 auto;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url("https://pbs.twimg.com/media/EVCU9wqUMAEVmty.jpg");
+}
+
+.card{
+  display: flex;
+  margin: 10px;
+}
+
+.navbar{
+  border: 1px solid black;
+  color: white;
+}
+
+.card-text:last-child {
+  padding: 15px;
+}
+
+.Card-title{
+  text-align: center;
+}
